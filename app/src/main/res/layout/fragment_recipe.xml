@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.recipe.RecipeFragment">
+
+        <ImageView
+            android:id="@+id/ivRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/recipe_image"
+            android:src="@drawable/beef"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnYoutube"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/youtube"
+            app:layout_constraintBottom_toBottomOf="@+id/ivRecipe"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:contentDescription="@string/watch_the_youtube_video"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/click_to_go_back_to_recipes_list"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:layout_marginStart="16dp"
+            android:id="@+id/chipCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@+id/ivRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/ivRecipe"
+            tools:text="Seafood"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/tvRecipeTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ivRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/chipCategory"
+            tools:text="Grilled Artichokes Salad" />
+
+        <TextView
+            android:id="@+id/tvRecipeInstructionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.Material3.ActionBar.Subtitle"
+            app:layout_constraintEnd_toEndOf="@id/tvRecipeTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvRecipeTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecipeTitle"
+            android:text="@string/instruction" />
+
+        <TextView
+            android:id="@+id/tvRecipeInstruction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintEnd_toEndOf="@id/tvRecipeTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvRecipeTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecipeInstructionTitle"
+            tools:text="Heat oven to 180C/fan 160C/gas 4. Trim the fronds from the fennel and set aside. Cut the fennel bulbs in half, then cut each half into 3 wedges. Cook in boiling salted water for 10 mins, then drain well. Chop the fennel fronds roughly, then mix with the parsley and lemon zest.\n\nSpread the drained fennel over a shallow ovenproof dish, then add the tomatoes. Drizzle with olive oil, then bake for 10 mins. Nestle the salmon among the veg, sprinkle with lemon juice, then bake 15 mins more until the fish is just cooked. Scatter over the parsley and serve." />
+
+        <TextView
+            android:id="@+id/tvRecipeIngredientTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/ingredient"
+            android:textAppearance="@style/TextAppearance.Material3.ActionBar.Subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ivRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecipeInstruction" />
+
+        <TextView
+            android:id="@+id/tvIngredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="• Item 1\n• Item 2\n• Item 3"
+            app:layout_constraintEnd_toEndOf="@+id/tvRecipeTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvRecipeTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecipeIngredientTitle" />
+
+        <ProgressBar
+            android:id="@+id/pbLoader"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminateTint="@color/red"
+            android:alpha="0.5"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+</ScrollView>

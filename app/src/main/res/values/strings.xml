@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RecipeHub</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_image">Category Image</string>
+    <string name="search">Search</string>
+    <string name="recipes">Recipes</string>
+    <string name="recipes_format">%s Recipes</string>
+    <string name="recipe_image">Recipe image</string>
+    <string name="click_to_go_back_to_recipes_list">Go back to recipes list</string>
+    <string name="instruction">Instruction</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="watch_the_youtube_video">Watch the youtube video</string>
+    <string name="error">Error</string>
+    <string name="failed_to_fetch_data">Failed to fetch data</string>
+    <string name="close">Close</string>
+    <string name="try_again">Try Again</string>
+    <string name="data_empty">Data empty</string>
+    <string name="categories">Categories</string>
+</resources>
